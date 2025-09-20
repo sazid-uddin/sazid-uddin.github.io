@@ -2027,7 +2027,7 @@ textarea.form-input::-webkit-resizer {
 		left: auto;
 		right: 0;
 		width: max-content;
-		border-radius: 0 20px;
+		border-radius: 0 8px;
 		padding: 0 20px;
 		box-shadow: none;
 	}
@@ -2148,7 +2148,7 @@ textarea.form-input::-webkit-resizer {
    */
 
 	main {
-		max-width: 1200px;
+		max-width: 1250px;
 		margin-inline: auto;
 		display: flex;
 		justify-content: center;

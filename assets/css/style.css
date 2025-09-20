@@ -50,6 +50,7 @@
 	--fs-5: 15px;
 	--fs-6: 14px;
 	--fs-7: 13px;
+	--fs-7-5: 12px;
 	--fs-8: 11px;
 
 	/* font-weight */
@@ -433,7 +434,15 @@ main {
 .avatar-box {
 	background: var(--bg-tertiary);
 	border: 1px solid var(--border-secondary);
-	border-radius: 12px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.avatar-box img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .info-content .name {
@@ -448,11 +457,12 @@ main {
 	color: var(--text-muted);
 	background: var(--bg-tertiary);
 	border: 1px solid var(--border-secondary);
-	font-size: var(--fs-8);
-	font-weight: var(--fw-300);
+	font-size: var(--fs-7-5);
+	font-weight: var(--fw-500);
 	width: max-content;
 	padding: 4px 12px;
 	border-radius: 6px;
+	text-align: center;	
 }
 
 .info_more-btn {
@@ -1569,11 +1579,12 @@ textarea.form-input::-webkit-resizer {
 	}
 
 	.avatar-box {
-		border-radius: 30px;
+		border-radius: 50%;
 	}
 
 	.avatar-box img {
-		width: 120px;
+		width: 160px;
+		height: 160px;
 	}
 
 	.info-content .name {
@@ -2172,7 +2183,8 @@ textarea.form-input::-webkit-resizer {
 	}
 
 	.avatar-box img {
-		width: 150px;
+		width: 180px;
+		height: 180px;
 	}
 
 	.info-content .name {

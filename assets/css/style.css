@@ -992,28 +992,6 @@ main {
 	line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
-	content: "";
-	position: absolute;
-	top: -25px;
-	left: -30px;
-	width: 1px;
-	height: calc(100% + 50px);
-	background: var(--jet);
-}
-
-.timeline-item::after {
-	content: "";
-	position: absolute;
-	top: 5px;
-	left: -33px;
-	height: 6px;
-	width: 6px;
-	background: var(--accent-primary);
-	border-radius: 50%;
-	box-shadow: 0 0 0 4px var(--border-primary);
-}
-
 .timeline-text {
 	color: var(--light-gray);
 	font-weight: var(--fw-300);

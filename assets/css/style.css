@@ -185,6 +185,26 @@
 		height: 45px;
 		font-size: 18px;
 	}
+
+	/* Mobile timeline adjustments */
+	.timeline-axis {
+		left: 20px;
+	}
+
+	.timeline-item.education,
+	.timeline-item.experience {
+		justify-content: flex-start;
+		padding-left: 50px;
+		padding-right: 0;
+	}
+
+	.timeline-content {
+		max-width: 100%;
+	}
+
+	.timeline-marker {
+		left: 20px;
+	}
 }
 
 
@@ -2245,6 +2265,133 @@ textarea.form-input::-webkit-resizer {
 
 	.timeline-text {
 		max-width: 700px;
+	}
+
+	/**
+	 * UNIFIED TIMELINE
+	 */
+
+	.timeline-unified {
+		position: relative;
+		margin-bottom: 35px;
+	}
+
+	.timeline-container {
+		position: relative;
+		padding: 40px 0;
+		min-height: 400px;
+	}
+
+	/* Central timeline axis */
+	.timeline-axis {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 3px;
+		background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+		transform: translateX(-50%);
+		border-radius: 2px;
+		box-shadow: 0 0 10px hsla(var(--accent-primary-hsl), 0.3);
+	}
+
+	/* Timeline items */
+	.timeline-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-bottom: 60px;
+		width: 100%;
+	}
+
+	/* Education items (left side) */
+	.timeline-item.education {
+		justify-content: flex-end;
+		padding-right: calc(50% + 30px);
+	}
+
+	/* Experience items (right side) */
+	.timeline-item.experience {
+		justify-content: flex-start;
+		padding-left: calc(50% + 30px);
+	}
+
+	/* Timeline content cards */
+	.timeline-content {
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.timeline-card {
+		background: var(--bg-tertiary);
+		border: 1px solid var(--border-secondary);
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: var(--shadow-2);
+		transition: var(--transition-1);
+		position: relative;
+	}
+
+	/* Card hover effects */
+	.timeline-card:hover {
+		background: var(--bg-secondary);
+		border-color: var(--border-primary);
+		box-shadow: var(--shadow-4);
+		transform: translateY(-3px);
+	}
+
+	/* Color-coded left borders */
+	.education .timeline-card {
+		border-left: 4px solid var(--accent-primary);
+	}
+
+	.experience .timeline-card {
+		border-left: 4px solid var(--accent-secondary);
+	}
+
+	/* Timeline markers */
+	.timeline-marker {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		border: 3px solid var(--bg-secondary);
+		box-shadow: var(--shadow-2);
+		z-index: 2;
+	}
+
+	.education-marker {
+		background: var(--accent-primary);
+	}
+
+	.experience-marker {
+		background: var(--accent-secondary);
+	}
+
+	/* Timeline content styling */
+	.timeline-item-title {
+		color: var(--white-2);
+		font-size: var(--fs-4);
+		font-weight: var(--fw-500);
+		margin-bottom: 8px;
+	}
+
+	.timeline-date {
+		color: var(--accent-primary);
+		font-size: var(--fs-7);
+		font-weight: var(--fw-500);
+		margin-bottom: 12px;
+		display: block;
+	}
+
+	.timeline-text {
+		color: var(--light-gray);
+		font-size: var(--fs-6);
+		font-weight: var(--fw-300);
+		line-height: 1.6;
 	}
 
 }

@@ -153,3 +153,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
+// timeline toggle functionality
+const timelineToggles = document.querySelectorAll(".timeline-toggle");
+
+timelineToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+        const details = this.nextElementSibling; // Get the timeline-details list
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+            // Collapse
+            this.setAttribute("aria-expanded", "false");
+            details.classList.remove("expanded");
+            details.classList.add("collapsed");
+        } else {
+            // Expand
+            this.setAttribute("aria-expanded", "true");
+            details.classList.remove("collapsed");
+            details.classList.add("expanded");
+        }
+    });
+});

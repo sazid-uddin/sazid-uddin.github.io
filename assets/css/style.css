@@ -168,6 +168,14 @@
 	transform: rotate(-180deg) scale(0.5);
 }
 
+/*-----------------------------------*\
+  #UTILITY CLASSES
+\*-----------------------------------*/
+
+.justify {
+	text-align: justify;
+}
+
 /* Responsive adjustments */
 @media (max-width: 450px) {
 	.theme-toggle {
@@ -454,7 +462,7 @@ main {
 }
 
 .info-content .title {
-	color: var(--text-muted);
+	color: var(--light-gray);
 	background: var(--bg-tertiary);
 	border: 1px solid var(--border-secondary);
 	font-size: var(--fs-7-5);
@@ -462,7 +470,7 @@ main {
 	width: max-content;
 	padding: 4px 12px;
 	border-radius: 6px;
-	text-align: center;	
+	text-align: center;
 }
 
 .info_more-btn {
@@ -645,7 +653,7 @@ main {
 
 .service-item {
 	position: relative;
-	background: var(--bg-tertiary);
+	background: var(--bg-secondary);
 	border: 1px solid var(--border-secondary);
 	padding: 24px;
 	border-radius: 8px;
@@ -655,7 +663,7 @@ main {
 }
 
 .service-item:hover {
-	background: var(--bg-secondary);
+	background: var(--bg-primary);
 	border-color: var(--border-primary);
 	box-shadow: var(--shadow-3);
 	transform: translateY(-2px);
@@ -874,14 +882,14 @@ main {
 
 
 /**
- * #clients 
+ * #affiliations 
  */
 
-.clients {
+.affiliations {
 	margin-bottom: 15px;
 }
 
-.clients-list {
+.affiliations-list {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -896,18 +904,18 @@ main {
 	scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.affiliations-item {
 	min-width: 50%;
 	scroll-snap-align: start;
 }
 
-.clients-item img {
-	width: 100%;
+.affiliations-item img {
+	width: 200px;
 	filter: grayscale(1);
 	transition: var(--transition-1);
 }
 
-.clients-item img:hover {
+.affiliations-item img:hover {
 	filter: grayscale(0);
 }
 
@@ -1471,7 +1479,7 @@ textarea.form-input::-webkit-resizer {
    * client
    */
 
-	.clients-item {
+	.affiliations-item {
 		min-width: calc(33.33% - 10px);
 	}
 
@@ -1747,16 +1755,16 @@ textarea.form-input::-webkit-resizer {
 		width: 35px;
 	}
 
-	/* clients */
+	/* affiliations */
 
-	.clients-list {
+	.affiliations-list {
 		gap: 50px;
 		margin: 0 -30px;
 		padding: 45px;
 		scroll-padding-inline: 45px;
 	}
 
-	.clients-item {
+	.affiliations-item {
 		min-width: calc(33.33% - 35px);
 	}
 
@@ -2060,9 +2068,9 @@ textarea.form-input::-webkit-resizer {
 		min-width: calc(50% - 15px);
 	}
 
-	/* clients */
+	/* affiliations */
 
-	.clients-item {
+	.affiliations-item {
 		min-width: calc(25% - 38px);
 	}
 

@@ -2308,6 +2308,7 @@ textarea.form-input::-webkit-resizer {
 		box-shadow: var(--shadow-2);
 		transition: var(--transition-1);
 		position: relative;
+		cursor: pointer;
 	}
 
 	/* Card hover effects */

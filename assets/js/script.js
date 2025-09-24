@@ -158,22 +158,97 @@ for (let i = 0; i < navigationLinks.length; i++) {
 const timelineCards = document.querySelectorAll(".timeline-card");
 
 timelineCards.forEach(function (card) {
-	card.addEventListener("click", function (event) {
-		// Prevent toggling if a link or button inside the card is clicked
-		if (event.target.closest("a, button")) return;
+    card.addEventListener("click", function (event) {
+        // Prevent toggling if a link or button inside the card is clicked
+        if (event.target.closest("a, button")) return;
 
-		const toggle = card.querySelector(".timeline-toggle");
-		const details = card.querySelector(".timeline-details");
-		const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        const toggle = card.querySelector(".timeline-toggle");
+        const details = card.querySelector(".timeline-details");
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
 
-		if (isExpanded) {
-			toggle.setAttribute("aria-expanded", "false");
-			details.classList.remove("expanded");
-			details.classList.add("collapsed");
-		} else {
-			toggle.setAttribute("aria-expanded", "true");
-			details.classList.remove("collapsed");
-			details.classList.add("expanded");
-		}
-	});
+        if (isExpanded) {
+            toggle.setAttribute("aria-expanded", "false");
+            details.classList.remove("expanded");
+            details.classList.add("collapsed");
+        } else {
+            toggle.setAttribute("aria-expanded", "true");
+            details.classList.remove("collapsed");
+            details.classList.add("expanded");
+        }
+    });
+});
+
+// research card click functionality
+const researchCards = document.querySelectorAll(".research-card");
+
+// Create overlay element
+const researchOverlay = document.createElement("div");
+researchOverlay.className = "research-overlay";
+document.body.appendChild(researchOverlay);
+
+researchCards.forEach(function (card) {
+    card.addEventListener("click", function (event) {
+        // Don't trigger if clicking on close button
+        if (event.target.closest("[data-research-close]")) {
+            return;
+        }
+
+        // Don't trigger if card is already expanded (in overlay mode)
+        if (card.classList.contains("expanded-overlay")) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const abstract = card.querySelector(".research-abstract");
+        const toggleBtn = card.querySelector("[data-abstract-toggle]");
+
+        // Close any currently expanded cards
+        document.querySelectorAll(".research-card.expanded-overlay").forEach(function (expandedCard) {
+            expandedCard.classList.remove("expanded-overlay");
+            const expandedAbstract = expandedCard.querySelector(".research-abstract");
+            expandedAbstract.classList.remove("active");
+        });
+
+        // Open the overlay
+        card.classList.add("expanded-overlay");
+        abstract.classList.add("active");
+        researchOverlay.classList.add("active");
+        document.body.classList.add("research-overlay-active");
+    });
+});
+
+// Close overlay when clicking outside the expanded card or on the close button
+document.addEventListener("click", function (event) {
+    const expandedCard = document.querySelector(".research-card.expanded-overlay");
+    if (expandedCard) {
+        // Check if the click is on the close button or outside the expanded card
+        const isCloseButton = event.target.closest("[data-research-close]");
+        const isOutsideCard = !expandedCard.contains(event.target);
+
+        if (isCloseButton || isOutsideCard) {
+            const abstract = expandedCard.querySelector(".research-abstract");
+
+            expandedCard.classList.remove("expanded-overlay");
+            abstract.classList.remove("active");
+            researchOverlay.classList.remove("active");
+            document.body.classList.remove("research-overlay-active");
+        }
+    }
+});
+
+// Close overlay with Escape key
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        const expandedCard = document.querySelector(".research-card.expanded-overlay");
+        if (expandedCard) {
+            const abstract = expandedCard.querySelector(".research-abstract");
+
+            expandedCard.classList.remove("expanded-overlay");
+            abstract.classList.remove("active");
+            researchOverlay.classList.remove("active");
+            document.body.classList.remove("research-overlay-active");
+        }
+    }
 });

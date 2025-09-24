@@ -1417,8 +1417,8 @@ main {
 	transform: translate(-50%, -50%);
 	z-index: 101;
 	max-width: 90vw;
-	max-height: 90vh;
-	overflow: hidden;
+	height: 100vh;
+	overflow-y: auto;
 	box-shadow: var(--shadow-5);
 	animation: expandCard 0.3s ease-out forwards;
 	cursor: default;
@@ -1487,6 +1487,39 @@ main {
 
 .research-card.expanded-overlay .abstract-toggle {
 	display: none;
+}
+
+.get-paper-btn {
+	display: none;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 12px 16px;
+	margin-top: 16px;
+	background: var(--eerie-black-1);
+	color: var(--white-1);
+	font-size: var(--fs-7);
+	font-weight: var(--fw-500);
+	border-radius: 8px;
+	border: 2px solid var(--border-primary);
+	text-decoration: none;
+	transition: var(--transition-1);
+}
+
+.research-card.expanded-overlay .get-paper-btn {
+	display: flex;
+}
+
+.get-paper-btn:hover {
+	background: var(--white-1);
+	color: var(--eerie-black-1);
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-2);
+}
+
+.get-paper-btn ion-icon {
+	font-size: 16px;
 }
 
 /* Research overlay responsive styles */

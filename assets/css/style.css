@@ -116,23 +116,20 @@
 \*-----------------------------------*/
 
 .theme-toggle {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	width: 48px;
-	height: 48px;
+	width: 40px;
+	height: 40px;
 	background: var(--bg-secondary);
 	border: 1px solid var(--border-primary);
-	border-radius: 8px;
+	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 20px;
+	font-size: 18px;
 	color: var(--accent-primary);
 	box-shadow: var(--shadow-2);
-	z-index: 10;
 	transition: var(--transition-1);
 	cursor: pointer;
+	margin: 8px;
 }
 
 .theme-toggle:hover {
@@ -179,11 +176,15 @@
 /* Responsive adjustments */
 @media (max-width: 450px) {
 	.theme-toggle {
-		top: 15px;
-		right: 15px;
-		width: 45px;
-		height: 45px;
-		font-size: 18px;
+		width: 36px;
+		height: 36px;
+		font-size: 16px;
+		margin: 6px;
+	}
+
+	.navbar-separator {
+		height: 25px;
+		margin: 0 10px;
 	}
 
 	/* Mobile timeline adjustments */
@@ -602,6 +603,10 @@ main {
 	border-radius: 8px 8px 0 0;
 	box-shadow: var(--shadow-3);
 	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 15px;
 }
 
 .navbar-list {
@@ -609,7 +614,8 @@ main {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 0 10px;
+	padding: 0;
+	margin: 0;
 }
 
 .navbar-link {
@@ -626,6 +632,13 @@ main {
 
 .navbar-link.active {
 	color: var(--accent-primary);
+}
+
+.navbar-separator {
+	width: 1px;
+	height: 30px;
+	background: var(--border-primary);
+	margin: 0 15px;
 }
 
 
@@ -931,13 +944,13 @@ main {
 
 .affiliations-item img {
 	width: 200px;
-	filter: grayscale(1);
+	/* filter: grayscale(1); */
 	transition: var(--transition-1);
 }
 
-.affiliations-item img:hover {
+/* .affiliations-item img:hover {
 	filter: grayscale(0);
-}
+} */
 
 
 

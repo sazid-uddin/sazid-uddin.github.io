@@ -1,0 +1,5 @@
+# Local/tailnet dev overrides -- merged on top of _config.yml via
+# `jekyll serve --config _config.yml,_config_dev.yml`.
+# Not used for the production build; keeps _config.yml's real url intact
+# for when this actually gets pushed live.
+url: ""

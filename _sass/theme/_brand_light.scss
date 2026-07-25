@@ -1,0 +1,59 @@
+/* ==========================================================================
+    BRAND THEME - LIGHT VERSION
+    Ported 1:1 from the old sazid-uddin.github.io custom CSS palette
+    (--bg-primary/--border-primary/--accent-primary etc, [data-theme="light"] block)
+    ========================================================================== */
+
+$primary-color              : hsl(220, 100%, 60%);
+$gray                       : hsl(220, 9%, 55%);
+$dark-gray                  : hsl(220, 15%, 15%);
+$darker-gray                : hsl(220, 15%, 10%);
+$light-gray                 : hsl(220, 9%, 40%);
+$lighter-gray               : hsl(220, 13%, 88%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : hsl(220, 100%, 60%);
+$notice-color               : hsl(220, 9%, 55%);
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 8px;
+$box-shadow                 : 0 4px 12px hsla(0, 0%, 0%, 0.04);
+$global-transition          : all 0.25s ease;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+$global-font-family         : 'Poppins', sans-serif;
+$header-font-family         : 'Poppins', sans-serif;
+
+/* Brand light theme for the site */
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : hsl(0, 0%, 98%);
+    --global-footer-bg-color            : hsl(0, 0%, 96%);
+    --global-border-color               : hsl(220, 13%, 88%);
+    --global-dark-border-color          : hsl(220, 13%, 85%);
+    --global-code-background-color      : hsl(0, 0%, 94%);
+    --global-code-text-color            : hsl(220, 15%, 20%);
+    --global-fig-caption-color          : hsl(220, 9%, 55%);
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : hsl(220, 100%, 50%);
+    --global-link-color-visited         : hsl(220, 100%, 55%);
+    --global-masthead-link-color        : hsl(220, 15%, 15%);
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : hsl(220, 15%, 15%);
+    --global-text-color-light           : hsl(220, 9%, 40%);
+    --global-thead-color                : hsl(0, 0%, 94%);
+
+    /* extra tokens (not part of Minimal Mistakes' base set) used by our layout overrides */
+    --shadow-sm                         : 0 2px 8px hsla(0, 0%, 0%, 0.04);
+    --shadow-md                         : 0 4px 12px hsla(0, 0%, 0%, 0.04);
+    --shadow-lg                         : 0 8px 16px hsla(0, 0%, 0%, 0.04);
+    --border-radius-lg                  : 16px;
+    --accent-color                      : #{$primary-color};
+}

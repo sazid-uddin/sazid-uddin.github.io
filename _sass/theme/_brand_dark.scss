@@ -1,0 +1,66 @@
+/* ==========================================================================
+    BRAND THEME - DARK VERSION
+    Ported 1:1 from the old sazid-uddin.github.io custom CSS palette
+    (--bg-primary/--border-primary/--accent-primary etc, :root default block)
+    ========================================================================== */
+
+$primary-color              : hsl(220, 100%, 60%);
+$gray                       : hsl(220, 9%, 55%);
+$dark-gray                  : hsl(220, 9%, 33%);
+$darker-gray                : hsl(220, 9%, 22%);
+$light-gray                 : hsl(220, 9%, 70%);
+
+$background                 : hsl(220, 13%, 18%);
+$background-light           : hsl(220, 13%, 16%);
+$background-lighter         : hsl(220, 13%, 14%);
+$text                       : #ffffff;
+$link                       : hsl(220, 100%, 60%);
+$link-dark                  : hsl(220, 100%, 50%);
+$link-light                 : hsl(220, 100%, 70%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : hsl(220, 100%, 60%);
+$notice-color               : hsl(220, 9%, 55%);
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 8px;
+$box-shadow                 : 0 4px 12px hsla(0, 0%, 0%, 0.1);
+$global-transition          : all 0.25s ease;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+$global-font-family         : 'Poppins', sans-serif;
+$header-font-family         : 'Poppins', sans-serif;
+
+/* Brand dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$background-light};
+    --global-border-color               : hsl(220, 13%, 20%);
+    --global-dark-border-color          : hsl(220, 13%, 24%);
+    --global-code-background-color      : #{$background-lighter};
+    --global-code-text-color            : hsl(0, 0%, 95%);
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-light};
+    --global-link-color-visited         : #{$link-dark};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #{$background-lighter};
+
+    /* extra tokens (not part of Minimal Mistakes' base set) used by our layout overrides */
+    --shadow-sm                         : 0 2px 8px hsla(0, 0%, 0%, 0.1);
+    --shadow-md                         : 0 4px 12px hsla(0, 0%, 0%, 0.1);
+    --shadow-lg                         : 0 8px 16px hsla(0, 0%, 0%, 0.1);
+    --border-radius-lg                  : 16px;
+    --accent-color                      : #{$primary-color};
+}

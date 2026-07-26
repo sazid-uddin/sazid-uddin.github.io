@@ -8,22 +8,26 @@ redirect_from:
 ---
 
 {% include base_path %}
+{% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
+{% if cv_pdf %}
+<div class="cv-pdf-embed">
+  <embed src="{{ base_path }}/files/cv.pdf" type="application/pdf" />
+</div>
+<p><a href="{{ base_path }}/files/cv.pdf" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
+{% else %}
 
-Research Interests
-======
+## Research Interests
 * AI Safety & Alignment
 * Formal Verification
 * Mechanistic Interpretability
 
-Education
-======
+## Education
 * M.Sc. in Computer Science (Intelligent Systems), American International University–Bangladesh (AIUB), 2023 — CGPA 3.88/4.00, Magna Cum Laude
 * B.Sc. in Software Engineering, American International University–Bangladesh (AIUB), 2022 — CGPA 3.84/4.00
 
 Both degrees: 100% tuition fee waiver. Relevant coursework: Machine Learning & Neural Networks, Natural Language Processing, Computer Vision & Pattern Recognition, Knowledge Based Systems, Image Processing, Design & Analysis of Algorithms.
 
-Work experience
-======
+## Work experience
 * Dec 2024 – Present: Lecturer, Dept. of Computer Science
   * American International University–Bangladesh (AIUB)
   * Teaches programming, computer architecture, operating systems, software engineering, and web development
@@ -41,8 +45,7 @@ Work experience
 * Jul 2021 – Dec 2021: Intern Software Engineer
   * Orion Informatics Ltd.
 
-Skills
-======
+## Skills
 * Programming: Python, Java, C++, JavaScript
 * ML/DL frameworks: PyTorch, TensorFlow, Keras, Scikit-learn, Transformers
 * LLM tooling: HuggingFace, Ollama, LangChain
@@ -52,30 +55,26 @@ Skills
 * Databases: MS SQL Server, MySQL, MongoDB
 * Dev tools: Git, Docker, Postman, VS Code, IntelliJ IDEA, Jupyter Notebook
 
-Publications
-======
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Talks
-======
+## Talks
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
 
-Teaching
-======
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Awards & service
-======
+## Awards & service
 * Magna Cum Laude, M.Sc. Computer Science, AIUB
 * 100% tuition fee waiver, both B.Sc. and M.Sc., AIUB
 * Peer Reviewer, ICCA 2026 (ongoing)
 
-Extracurricular
-======
+## Extracurricular
 * Organizer, Knights Cubing Open 2019 — co-hosted the 4th official speedcubing competition in Bangladesh; competed and solved a Rubik's Cube blindfolded
+{% endif %}

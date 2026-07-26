@@ -307,7 +307,24 @@
     white-space: nowrap;
   }
 
-  a {
+  /* table layout: icon column centered, link/text column left-aligned */
+  border-collapse: collapse;
+
+  tr {
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 2px 0;
+  }
+
+  .author__url-icon {
+    width: 1.5em;
+    text-align: center;
+    padding-right: 8px;
+  }
+
+  a, .author__link-button, .author__email {
     display: block;
     margin-bottom: 5px;
     padding-right: 5px;
@@ -321,4 +338,27 @@
       text-decoration: underline;
     }
   }
+
+  .author__link-button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding-left: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .author__icon--scholar {
+    font-size: 1.3em;
+    vertical-align: middle;
+  }
+
+  .author__icon--linkedin {
+    /* matches the rest of the icon set instead of Font Awesome's brand blue */
+    color: inherit !important;
+  }
+}
+
+.u-hidden-decoy {
+  display: none !important;
 }

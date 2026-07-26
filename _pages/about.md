@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "AI Researcher & Software Engineer"
+title: "Md. Sazid Uddin"
 author_profile: true
 redirect_from:
   - /about/
@@ -11,8 +11,7 @@ I'm an AI researcher and software engineer — three-plus years building product
 
 **Focus:** AI Safety & Alignment · Formal Verification · Mechanistic Interpretability
 
-What I do
-======
+## What I do
 
 **Research.** Published work in computer vision, reinforcement learning, and generative models (Frontiers, IEEE, Springer). Currently working on formal verification of mechanistic interpretability interventions on toy transformer models, aimed at a top-tier conference submission.
 
@@ -20,4 +19,11 @@ What I do
 
 **Software engineering.** Three-plus years at Orion Informatics Ltd., building full-stack systems (Spring Boot, Angular, MS SQL Server, Apache Kafka) for Equiniti US's shareholder/company management platform — including a Kafka messaging pipeline handling millions of shareholder votes per hour and a 60% reporting-query performance improvement.
 
-See [Publications](/publications/), [Portfolio](/portfolio/), [Teaching](/teaching/), and [CV](/cv/) for the full picture.
+---
+
+<a href="/publications/" class="btn btn--inverse">Publications</a>
+<a href="/portfolio/" class="btn btn--inverse">Portfolio</a>
+<a href="/teaching/" class="btn btn--inverse">Teaching</a>
+<a href="/talks/" class="btn btn--inverse">Talks</a>
+<a href="/year-archive/" class="btn btn--inverse">Blog</a>
+<a href="/cv/" class="btn btn--inverse">CV</a>

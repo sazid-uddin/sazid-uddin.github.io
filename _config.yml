@@ -22,12 +22,13 @@ repository               : "sazid-uddin/sazid-uddin.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "sazid.jpg"
   name             : "Md. Sazid Uddin"
   pronouns         : # example: "she/her"
   bio              : "AI researcher and software engineer working on interpretable, verifiable AI systems — and the production infrastructure to ship them."
   location         : "Dhaka, Bangladesh"
   employer         : "AIUB"
+  employer_url     : # TODO: link to your AIUB faculty profile page once you send the URL -- employer name renders as plain text until then
   uri              : # intentionally blank -- this *is* the homepage, a self-link would be redundant
   email            : "sazid.uddin@aiub.edu"
 
@@ -82,13 +83,14 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
+# Order here is the display order on the Publications page.
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  books:
+    title: 'Book Chapters'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -153,6 +155,10 @@ social:
 
 
 # Analytics
+# TODO: once you have a GA4 measurement ID (format G-XXXXXXXXXX, from
+# analytics.google.com > Admin > Data Streams), set provider to
+# "google-analytics-4" and paste the ID below -- that's the only change
+# needed, the include is already wired up (_includes/analytics.html).
 analytics:
   provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:

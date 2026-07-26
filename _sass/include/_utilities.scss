@@ -463,6 +463,150 @@ body:hover .visually-hidden button {
 
 
 /*
+   Location modal (sidebar map)
+   ========================================================================== */
+
+.location-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  &.is-open {
+    display: block;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__box {
+    position: relative;
+    max-width: 90vw;
+    width: 420px;
+    margin: 10vh auto 0;
+    padding: 1em;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: var(--border-radius-lg, #{$border-radius});
+    box-shadow: var(--shadow-lg, #{$box-shadow});
+  }
+
+  &__title {
+    margin: 0 0 0.75em;
+    font-size: $type-size-6;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.75em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    line-height: 1;
+    color: var(--global-text-color);
+    cursor: pointer;
+  }
+
+  &__map {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: $border-radius;
+  }
+
+  &__box--wide {
+    width: 560px;
+  }
+}
+
+
+/*
+   Citation export modal
+   ========================================================================== */
+
+.citation-modal__label {
+  margin: 1em 0 0.25em;
+  font-weight: bold;
+  font-size: $type-size-6;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.citation-modal__box {
+  position: relative;
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  padding: 0.75em;
+
+  pre {
+    margin: 0;
+    padding-right: 4.5em;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: $type-size-7;
+  }
+}
+
+.citation-modal__copy {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  margin-bottom: 0;
+}
+
+
+/*
+   Publication badges
+   ========================================================================== */
+
+.pub-badges {
+  margin-bottom: 0.5em;
+}
+
+.pub-badge {
+  display: inline-block;
+  margin-right: 0.4em;
+  padding: 0.15em 0.6em;
+  font-size: $type-size-8;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--accent-color, var(--global-base-color));
+  border: 1px solid var(--accent-color, var(--global-base-color));
+  border-radius: $border-radius;
+}
+
+.pub-doi {
+  font-size: $type-size-7;
+  word-break: break-all;
+}
+
+
+/*
+   CV PDF embed
+   ========================================================================== */
+
+.cv-pdf-embed {
+  margin-bottom: 1em;
+
+  embed {
+    width: 100%;
+    height: 85vh;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius;
+  }
+}
+
+
+/*
    Footnotes
    ========================================================================== */
 

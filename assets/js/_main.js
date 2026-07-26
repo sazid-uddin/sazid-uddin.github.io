@@ -9,20 +9,12 @@
 const PLOTLY_URL = "https://cdn.jsdelivr.net/npm/plotly.js@3.6.0/dist/plotly.min.js";
 const MERMAID_URL = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
-// Detect OS/browser preference
-const browserPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
 // Determine the computed theme, which can be "dark" or "light".
+// Deliberately does not follow OS/browser preference -- first-time visitors
+// always get light unless they've explicitly toggled dark before.
 function determineComputedTheme() {
-  // Determine the expected state of the theme toggle, which can be "dark", "light", or default "system"
-  let themeSetting = localStorage.getItem("theme");
-  themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
-
-  // Return the setting if set, or use the browser preference
-  if (themeSetting != "system") {
-    return themeSetting;
-  }
-  return browserPref ? "dark" : "light";
+  const themeSetting = localStorage.getItem("theme");
+  return themeSetting === "dark" ? "dark" : "light";
 }
 
 // Set the theme on page load or when explicitly called
@@ -30,7 +22,7 @@ function setTheme(theme) {
   const use_theme = theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    browserPref;
+    "light";
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -143,17 +135,60 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // Apply the stored theme choice, or light if the visitor hasn't chosen one yet
   setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
+
+  // Copy-link share button
+  $('.btn--copy-link').on('click', function () {
+    const url = new URL($(this).data('copy-url'), window.location.origin).href;
+    const $btn = $(this);
+    navigator.clipboard.writeText(url).then(function () {
+      const $label = $btn.find('span');
+      const original = $label.text();
+      $label.text(' Copied!');
+      setTimeout(function () { $label.text(original); }, 1500);
+    });
+  });
+
+  // Generic modal open/close (location map + citation export share the same markup pattern)
+  function openModal($modal) {
+    $modal.addClass('is-open').attr('aria-hidden', 'false');
+  }
+  function closeAllModals() {
+    $('.location-modal').removeClass('is-open').attr('aria-hidden', 'true');
+  }
+
+  $('#location-modal-trigger').on('click', function () {
+    openModal($('#location-modal'));
+  });
+
+  $('.location-modal [data-modal-close]').on('click', closeAllModals);
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeAllModals();
+    }
+  });
+
+  // Export Citation modal
+  $('.citation-export-trigger').on('click', function () {
+    $('#citation-modal-text').text($(this).data('citation-text'));
+    $('#citation-modal-bibtex').text($(this).data('citation-bibtex'));
+    openModal($('#citation-modal'));
+  });
+
+  $('.citation-modal__copy').on('click', function () {
+    const targetId = $(this).data('copy-target');
+    const text = $('#' + targetId).text();
+    const $btn = $(this);
+    navigator.clipboard.writeText(text).then(function () {
+      const original = $btn.text();
+      $btn.text('Copied!');
+      setTimeout(function () { $btn.text(original); }, 1500);
+    });
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {

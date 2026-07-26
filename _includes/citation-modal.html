@@ -1,0 +1,19 @@
+<div class="location-modal" id="citation-modal" aria-hidden="true">
+  <div class="location-modal__backdrop" data-modal-close></div>
+  <div class="location-modal__box location-modal__box--wide" role="dialog" aria-modal="true" aria-label="Export citation">
+    <button type="button" class="location-modal__close" data-modal-close aria-label="Close">&times;</button>
+    <h4 class="location-modal__title">Export Citation</h4>
+
+    <p class="citation-modal__label">Citation</p>
+    <div class="citation-modal__box">
+      <pre id="citation-modal-text"></pre>
+      <button type="button" class="btn btn--inverse btn--x-small citation-modal__copy" data-copy-target="citation-modal-text">Copy</button>
+    </div>
+
+    <p class="citation-modal__label">BibTeX</p>
+    <div class="citation-modal__box">
+      <pre id="citation-modal-bibtex"></pre>
+      <button type="button" class="btn btn--inverse btn--x-small citation-modal__copy" data-copy-target="citation-modal-bibtex">Copy</button>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 title: "Cauli-Det: Modified YOLOv8 for Cauliflower Disease Detection"
 excerpt: "91.1% mAP across three cauliflower disease classes from smartphone-captured field images. Published in Frontiers in Plant Science."
 collection: portfolio
+order: 2
 tags:
   - Research
   - Computer Vision

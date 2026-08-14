@@ -13,6 +13,12 @@
   @include clearfix();
   margin-bottom: 1em;
 
+  @media screen and (max-width: 924px) {
+    border-bottom: 2px solid var(--global-dark-border-color);
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+  }
+
   @media (orientation: portrait) {
     margin-top: 1em;
   }
@@ -51,7 +57,7 @@
 
   p, li {
     font-family: $sans-serif;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
     line-height: 1.5;
   }
 
@@ -189,7 +195,7 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4;
 }
 
 .sidebar .author__desktop {
@@ -210,6 +216,8 @@
 
 .author__bio {
   margin: 0;
+  font-size: $type-size-5;
+  line-height: 1.6;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -250,8 +258,8 @@
   position: absolute;
   right: 0;
   margin-top: 15px;
-  padding: 10px;
-  list-style-type: none;
+  padding: 6px;
+  list-style: none;
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   background: var(--global-bg-color);
@@ -303,59 +311,192 @@
     }
   }
 
-  li {
-    white-space: nowrap;
-  }
-
-  /* table layout: icon column centered, link/text column left-aligned */
-  border-collapse: collapse;
-
-  tr {
-    white-space: nowrap;
-  }
+  /* reset global table styles */
+  font-size: $type-size-5;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 1px;
+  width: 100%;
 
   td {
-    padding: 2px 0;
+    border: none;
+  }
+
+  tr {
+    transition: background-color 0.15s ease;
+
+    &:hover td {
+      background-color: var(--global-border-color);
+    }
+
+    &:hover td.author__url-icon {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:hover td:last-child {
+      border-radius: 0 5px 5px 0;
+    }
   }
 
   .author__url-icon {
-    width: 1.5em;
+    width: 2em;
+    min-width: 2em;
     text-align: center;
-    padding-right: 8px;
+    vertical-align: middle;
+    padding: 0.25em 0;
+    opacity: 0.55;
   }
 
-  a, .author__link-button, .author__email {
+  td:last-child {
+    vertical-align: middle;
+    padding: 0.1em 0.3em 0.1em 0;
+  }
+
+  a,
+  .author__link-button,
+  .author__url-label {
     display: block;
-    margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
     color: inherit;
     font-size: $type-size-5;
+    font-family: $sans-serif;
     text-decoration: none;
+    white-space: nowrap;
+    padding: 0.15em 0;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
   .author__link-button {
     background: none;
     border: none;
-    font-family: inherit;
-    padding-left: 0;
     cursor: pointer;
     text-align: left;
+    padding-left: 0;
+    width: 100%;
   }
 
-  .author__icon--scholar {
-    font-size: 1.3em;
-    vertical-align: middle;
+  .author__url-label {
+    cursor: default;
+  }
+}
+
+/* ==========================================================================
+   Mobile author profile: compact banner layout
+   ========================================================================== */
+
+@media screen and (max-width: 924px) {
+  // Flex-wrap container: avatar + content on row 1, icon strip on row 2
+  .author__profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em 1em;
   }
 
-  .author__icon--linkedin {
-    /* matches the rest of the icon set instead of Font Awesome's brand blue */
-    color: inherit !important;
+  .author__avatar {
+    display: block;
+    flex: 0 0 70px;
+    width: 70px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .author__content {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+
+    // Clamp bio to 2 lines on mobile
+    .author__bio {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+  }
+
+  // Icon strip takes full width as second row
+  .author__urls-wrapper {
+    flex: 0 0 100%;
+    display: block;
+    cursor: default;
+
+    > button {
+      display: none;
+    }
+  }
+
+  .author__urls {
+    display: block;
+    position: static;
+    margin: 0.2em 0 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    // Lay out rows as a horizontal flex strip of icon bubbles
+    tbody {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45em;
+    }
+
+    tr {
+      display: block;
+      position: relative;
+
+      // Disable the desktop row-highlight hover
+      &:hover td {
+        background-color: transparent;
+      }
+
+      &:hover td.author__url-icon {
+        background-color: var(--global-dark-border-color);
+        border-radius: 50%;
+        opacity: 1;
+      }
+    }
+
+    // Icon cell: visible circle
+    td.author__url-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.1em;
+      height: 2.1em;
+      border-radius: 50%;
+      background: var(--global-border-color);
+      opacity: 0.75;
+      padding: 0;
+    }
+
+    // Label cell: invisible overlay so the link/button covers the whole icon
+    td:last-child {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+
+      a,
+      .author__link-button {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
+    }
   }
 }
 

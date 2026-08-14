@@ -2,6 +2,7 @@
 title: "Formal Verification of Mechanistic Interpretability Interventions (In Progress)"
 excerpt: "Developing methods to formally verify safety properties of activation-editing techniques in transformer models, on toy models, aimed at a top-tier conference submission."
 collection: portfolio
+order: 1
 tags:
   - Research
   - AI Safety

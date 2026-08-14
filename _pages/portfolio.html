@@ -7,8 +7,35 @@ author_profile: true
 
 {% include base_path %}
 
+<div class="portfolio-list">
+  {% assign portfolio_sorted = site.portfolio | sort: "order" %}
+  {% for post in portfolio_sorted %}
+  <article class="portfolio-card">
 
-{% for post in site.portfolio %}
-  {% include archive-single.html type="grid" %}
-{% endfor %}
+    <div class="portfolio-card__body">
+      <h2 class="portfolio-card__title">
+        <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
 
+      {% if post.tags %}
+      <p class="portfolio-card__tags">
+        {% for tag in post.tags %}<span class="pub-badge">{{ tag }}</span> {% endfor %}
+      </p>
+      {% endif %}
+
+      {% if post.excerpt %}
+      <p class="portfolio-card__excerpt">{{ post.excerpt | strip_html }}</p>
+      {% endif %}
+
+      <a class="portfolio-card__readmore" href="{{ base_path }}{{ post.url }}">Read more &rarr;</a>
+    </div>
+
+    {% if post.header.teaser %}
+    <div class="portfolio-card__image">
+      <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title }}" />
+    </div>
+    {% endif %}
+
+  </article>
+  {% endfor %}
+</div>

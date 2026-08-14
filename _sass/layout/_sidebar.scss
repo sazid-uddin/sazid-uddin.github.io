@@ -387,18 +387,18 @@
    ========================================================================== */
 
 @media screen and (max-width: 924px) {
-  // Flex-wrap container: avatar + content on row 1, icon strip on row 2
+  // Two-column layout: avatar left, right column (name + bio + icons) right
   .author__profile {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5em 1em;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
   }
 
   .author__avatar {
     display: block;
-    flex: 0 0 70px;
-    width: 70px;
+    flex-shrink: 0;
+    width: 110px;
 
     img {
       width: 100%;
@@ -406,27 +406,23 @@
     }
   }
 
-  .author__content {
-    display: block;
+  // Right column — stacks name, bio, then icons vertically
+  .author__sidebar-info {
     flex: 1;
     min-width: 0;
-    padding: 0;
-
-    // Clamp bio to 2 lines on mobile
-    .author__bio {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 0;
-    }
+    display: flex;
+    flex-direction: column;
   }
 
-  // Icon strip takes full width as second row
+  .author__content {
+    display: block;
+    padding: 0;
+  }
+
   .author__urls-wrapper {
-    flex: 0 0 100%;
     display: block;
     cursor: default;
+    margin-top: 0.5em;
 
     > button {
       display: none;

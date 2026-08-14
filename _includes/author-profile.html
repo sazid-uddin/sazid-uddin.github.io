@@ -14,11 +14,12 @@
     {% endif %}
   </div>
 
-  <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
-  </div>
+  <div class="author__sidebar-info">
+    <div class="author__content">
+      <h3 class="author__name">{{ author.name }}</h3>
+      {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
+      {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
@@ -195,6 +196,7 @@
       </tbody>
     </table>
   </div><!-- /.author__urls-wrapper -->
+  </div><!-- /.author__sidebar-info -->
 </div><!-- /.author__profile -->
 
 {% if author.location %}

@@ -2,6 +2,7 @@
 title: "Cooperative Multi-Agent RL for Mammogram ROI Classification"
 excerpt: "Multiple RL agents independently observe local patches of a mammogram ROI, communicate, and reach a decentralized consensus classification. Presented at IEEE ICDABI 2023."
 collection: portfolio
+order: 3
 tags:
   - Research
   - Reinforcement Learning

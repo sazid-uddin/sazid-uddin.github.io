@@ -2,6 +2,172 @@
    ARCHIVE
    ========================================================================== */
 
+/* ==========================================================================
+   PORTFOLIO CARDS
+   ========================================================================== */
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px hsla(0, 0%, 0%, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      height: 180px;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25em 0 1.25em 1.25em;
+
+    @media (max-width: 600px) {
+      padding: 1em;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.4em;
+    font-size: $type-size-4;
+    line-height: 1.3;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-link-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__tags {
+    margin: 0 0 0.75em;
+  }
+
+  &__excerpt {
+    flex: 1;
+    margin: 0 0 1em;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+
+  &__readmore {
+    align-self: flex-start;
+    font-size: $type-size-6;
+    font-weight: bold;
+    color: var(--global-link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+    @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   BLOG CARDS
+   ========================================================================== */
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  margin-bottom: 2em;
+}
+
+.blog-card {
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 1.25em;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px hsla(0, 0%, 0%, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &__meta {
+    margin: 0 0 0.4em;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+  }
+
+  &__title {
+    margin: 0 0 0.4em;
+    font-size: $type-size-4;
+    line-height: 1.3;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-link-color);
+      }
+    }
+  }
+
+  &__tags {
+    margin: 0 0 0.75em;
+  }
+
+  &__excerpt {
+    margin: 0 0 1em;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+
+  &__readmore {
+    font-size: $type-size-6;
+    font-weight: bold;
+    color: var(--global-link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .archive {
   margin-bottom: 2em;
 

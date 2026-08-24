@@ -28,7 +28,7 @@ author:
   bio              : "AI researcher and software engineer working on interpretable, verifiable AI systems — and the production infrastructure to ship them."
   location         : "Dhaka, Bangladesh"
   employer         : "AIUB"
-  employer_url     : # TODO: link to your AIUB faculty profile page once you send the URL -- employer name renders as plain text until then
+  employer_url     : "https://www.aiub.edu/faculty-list/faculty-profile?q=sazid.uddin"
   uri              : # intentionally blank -- this *is* the homepage, a self-link would be redundant
   email            : "sazid.uddin@aiub.edu"
 

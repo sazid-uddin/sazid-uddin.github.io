@@ -161,7 +161,11 @@ $(document).ready(function () {
     $('.location-modal').removeClass('is-open').attr('aria-hidden', 'true');
   }
 
-  $('#location-modal-trigger').on('click', function () {
+  // Move modals to <body> so they escape the sidebar's fixed/overflow stacking context
+  $('.location-modal').appendTo('body');
+
+  $('#location-modal-trigger').on('click', function (e) {
+    e.stopPropagation(); // prevent bubbling to .author__urls-wrapper button toggle handler
     openModal($('#location-modal'));
   });
 
@@ -206,10 +210,11 @@ $(document).ready(function () {
   var didResize = false;
   bumpIt();
 
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
+  // Follow menu drop down (> button targets only the direct-child Follow button,
+  // not nested buttons like the location trigger inside the table)
+  $(".author__urls-wrapper > button").on("click", function () {
     $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
+    $(".author__urls-wrapper > button").toggleClass("open");
   });
 
   // Restore the follow menu if toggled on a window resize

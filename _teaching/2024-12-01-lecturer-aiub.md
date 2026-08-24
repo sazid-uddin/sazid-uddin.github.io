@@ -1,6 +1,7 @@
 ---
 title: "Lecturer, Dept. of Computer Science"
 collection: teaching
+output: false
 type: "Undergraduate courses"
 permalink: /teaching/2024-12-01-lecturer-aiub
 venue: "American International University-Bangladesh (AIUB)"
@@ -23,8 +24,6 @@ excerpt: >-
 ---
 
 Teaching programming, computer architecture, operating systems, software engineering, and web development to undergraduate Computer Science students. Dec 2024 – Present.
-
-*Per-semester course list to be added.*
 
 **Lead Developer, Web Development & Automation Team**
 Lead developer of the in-department Web Development & Automation team, designing and building internal systems to digitize and automate departmental activities and ensure smooth, efficient operation.

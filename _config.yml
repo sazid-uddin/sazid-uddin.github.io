@@ -155,14 +155,10 @@ social:
 
 
 # Analytics
-# TODO: once you have a GA4 measurement ID (format G-XXXXXXXXXX, from
-# analytics.google.com > Admin > Data Streams), set provider to
-# "google-analytics-4" and paste the ID below -- that's the only change
-# needed, the include is already wired up (_includes/analytics.html).
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
-    tracking_id          :
+    tracking_id          :  "G-70KRQBBZ1L"
 
 
 # Reading Files

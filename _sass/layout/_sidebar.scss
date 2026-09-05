@@ -170,6 +170,19 @@
   }
 }
 
+.author__avatar-trigger {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+
+  img {
+    display: block;
+  }
+}
+
 .author__content {
   display: table-cell;
   vertical-align: top;

@@ -6,12 +6,16 @@
 
 <div class="author__profile" itemscope itemtype="http://schema.org/Person">
 
+  {% if author.avatar contains "://" %}
+    {% assign avatar_src = author.avatar %}
+  {% else %}
+    {% assign avatar_src = author.avatar | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+
   <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
-    {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
-    {% endif %}
+    <button type="button" class="author__avatar-trigger" id="photo-modal-trigger" aria-label="View full size photo">
+      <img src="{{ avatar_src }}" alt="{{ author.name }}" fetchpriority="high" />
+    </button>
   </div>
 
   <div class="author__sidebar-info">
@@ -202,3 +206,5 @@
 {% if author.location %}
   {% include location-modal.html location=author.location %}
 {% endif %}
+
+{% include photo-modal.html src=avatar_src alt=author.name %}

@@ -528,6 +528,35 @@ body:hover .visually-hidden button {
   &__box--wide {
     width: 90vw;
   }
+
+  &__box--photo {
+    width: auto;
+    max-width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  &__photo {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: $border-radius;
+    box-shadow: var(--shadow-lg, #{$box-shadow});
+  }
+
+  &__box--photo &__close {
+    top: -0.25em;
+    right: -0.25em;
+    width: 1.75em;
+    height: 1.75em;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 50%;
+  }
 }
 
 

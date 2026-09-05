@@ -169,6 +169,11 @@ $(document).ready(function () {
     openModal($('#location-modal'));
   });
 
+  $('#photo-modal-trigger').on('click', function (e) {
+    e.stopPropagation();
+    openModal($('#photo-modal'));
+  });
+
   $('.location-modal [data-modal-close]').on('click', closeAllModals);
   $(document).on('keydown', function (e) {
     if (e.key === 'Escape') {

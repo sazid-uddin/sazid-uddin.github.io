@@ -12,7 +12,7 @@ site_theme               : "brand" # Custom skin ported from the old site's pale
 title                    : "Md. Sazid Uddin"
 title_separator          : "-"
 name                     : &name "Md. Sazid Uddin"
-description              : &description "AI researcher and software engineer — computer vision, reinforcement learning, generative models, and formal verification of mechanistic interpretability interventions."
+description              : &description "AI researcher and software engineer — computer vision, reinforcement learning, and generative models."
 url                      : https://sazid-uddin.github.io # production URL -- local/tailnet dev overrides this via _config_dev.yml
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sazid-uddin/sazid-uddin.github.io"

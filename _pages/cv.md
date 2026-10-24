@@ -18,6 +18,7 @@ redirect_from:
 
 ## Research Interests
 * AI Safety & Alignment
+* Formal Verification of Neural Networks and Language Models
 
 ## Education
 * M.Sc. in Computer Science (Intelligent Systems), American International University–Bangladesh (AIUB), 2023 — CGPA 3.88/4.00, Magna Cum Laude

@@ -676,3 +676,29 @@ a.reversefootnote {
   color: $danger-color;
   font-weight: bold;
 }
+
+
+/*
+   Research vision block (homepage)
+   ========================================================================== */
+
+.research-vision {
+  margin: 0 0 2em;
+  padding: 1.25em 1.5em;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-base-color);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  &__tagline {
+    margin: 0 0 0.6em;
+    font-size: $type-size-3;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--global-base-color);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

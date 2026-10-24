@@ -7,11 +7,21 @@ redirect_from:
   - /about.html
 ---
 
-<div class="research-vision">
-  <p class="research-vision__tagline">AI whose safety is proved, not promised.</p>
-  <p><strong>Long-term goal.</strong> AI systems that are safe and verifiable, with safety guarantees established by mathematical proof rather than anyone's assurance, so that no one's word needs to be trusted. A proof is only as good as the property it states, so part of the work is making safety properties precise enough to prove.</p>
-  <p><strong>Current focus.</strong> The formal verification of the safety of neural networks and language models in everyday use.</p>
-</div>
+<section class="research-vision">
+  <p class="research-vision__eyebrow">Research vision</p>
+  <h2 class="research-vision__tagline">AI whose safety is <em>proved</em>, not promised.</h2>
+  <div class="research-vision__grid">
+    <div class="research-vision__card">
+      <p class="research-vision__eyebrow">Long-term goal</p>
+      <p>AI systems that are safe and verifiable, with safety guarantees established by mathematical proof rather than anyone's assurance, so that no one's word needs to be trusted.</p>
+    </div>
+    <div class="research-vision__card research-vision__card--focus">
+      <p class="research-vision__eyebrow">Current focus</p>
+      <p>The formal verification of the safety of neural networks and language models in everyday use.</p>
+    </div>
+  </div>
+  <p class="research-vision__note">A proof is only as good as the property it states, so part of the work is making safety properties precise enough to prove.</p>
+</section>
 
 I'm an AI researcher and software engineer — three-plus years building production backend systems, plus peer-reviewed publications in computer vision, reinforcement learning, and generative models. I also build LLM systems on the side, most recently a natural-language-to-SQL system using RAG and vector search.
 

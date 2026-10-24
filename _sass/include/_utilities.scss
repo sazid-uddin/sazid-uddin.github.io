@@ -683,22 +683,74 @@ a.reversefootnote {
    ========================================================================== */
 
 .research-vision {
-  margin: 0 0 2em;
-  padding: 1.25em 1.5em;
+  margin: 0 0 2.5em;
+  padding: 2em 2em 1.5em;
   border: 1px solid var(--global-border-color);
-  border-left: 4px solid var(--global-base-color);
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--global-base-color) 7%, var(--global-bg-color)),
+    var(--global-bg-color)
+  );
 
-  &__tagline {
+  &__eyebrow {
     margin: 0 0 0.6em;
-    font-size: $type-size-3;
+    font-size: 0.7rem;
     font-weight: 600;
-    line-height: 1.25;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--global-base-color);
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  &__tagline {
+    margin: 0 0 1.1em;
+    padding: 0;
+    border: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--global-text-color);
+
+    em {
+      font-style: normal;
+      color: var(--global-base-color);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1em;
+  }
+
+  &__card {
+    padding: 1.1em 1.3em;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius;
+    background: color-mix(in srgb, var(--global-base-color) 5%, var(--global-bg-color));
+
+    p:last-child {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    &--focus {
+      background: color-mix(in srgb, #3aa68c 8%, var(--global-bg-color));
+      border-color: color-mix(in srgb, #3aa68c 25%, var(--global-border-color));
+
+      .research-vision__eyebrow {
+        color: #2f8a74;
+      }
+    }
+  }
+
+  &__note {
+    margin: 1.1em 0 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--global-text-color-light);
   }
 }

@@ -23,15 +23,15 @@ redirect_from:
   <p class="research-vision__note">A proof is only as good as the property it states, so part of the work is making safety properties precise enough to prove.</p>
 </section>
 
-I'm an AI researcher and software engineer — three-plus years building production backend systems, plus peer-reviewed publications in computer vision, reinforcement learning, and generative models. I also build LLM systems on the side, most recently a natural-language-to-SQL system using RAG and vector search.
+I'm an AI researcher and software engineer with three-plus years building production backend systems, plus peer-reviewed publications in computer vision, reinforcement learning, and generative models. I also build LLM systems on the side, most recently a natural-language-to-SQL system using RAG and vector search.
 
 ## What I do
 
 **Research.** My published work applied deep learning to medical imaging and agriculture (Frontiers, IEEE, Springer). Building and evaluating those systems is what made me want guarantees that go beyond test-set accuracy. My current focus is the formal verification of the safety of neural networks and language models.
 
-**Teaching.** Lecturer, Dept. of Computer Science, American International University–Bangladesh (AIUB) — programming, computer architecture, operating systems, software engineering, and web development. Lead developer of the department's Web Development & Automation team, building systems to digitize and automate departmental activities — including the student course registration system (AIUB's open-credit model) and the admission management system.
+**Teaching.** Lecturer, Dept. of Computer Science, American International University–Bangladesh (AIUB): programming, computer architecture, operating systems, software engineering, and web development. Lead developer of the department's Web Development & Automation team, building systems to digitize and automate departmental activities, including the student course registration system (AIUB's open-credit model) and the admission management system.
 
-**Software engineering.** Three-plus years at Orion Informatics Ltd., building full-stack systems (Spring Boot, Angular, MS SQL Server, Apache Kafka) for Equiniti US's shareholder/company management platform — including a Kafka messaging pipeline handling millions of shareholder votes per hour and a 60% reporting-query performance improvement.
+**Software engineering.** Three-plus years at Orion Informatics Ltd., building full-stack systems (Spring Boot, Angular, MS SQL Server, Apache Kafka) for Equiniti US's shareholder/company management platform, including a Kafka messaging pipeline handling millions of shareholder votes per hour and a 60% reporting-query performance improvement.
 
 ---
 

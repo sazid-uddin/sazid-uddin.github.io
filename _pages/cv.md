@@ -21,8 +21,8 @@ redirect_from:
 * Formal Verification of Neural Networks and Language Models
 
 ## Education
-* M.Sc. in Computer Science (Intelligent Systems), American International University–Bangladesh (AIUB), 2023 — CGPA 3.88/4.00, Magna Cum Laude
-* B.Sc. in Software Engineering, American International University–Bangladesh (AIUB), 2022 — CGPA 3.84/4.00
+* M.Sc. in Computer Science (Intelligent Systems), American International University–Bangladesh (AIUB), 2023, CGPA 3.88/4.00, Magna Cum Laude
+* B.Sc. in Software Engineering, American International University–Bangladesh (AIUB), 2022, CGPA 3.84/4.00
 
 Both degrees: 100% tuition fee waiver. Relevant coursework: Machine Learning & Neural Networks, Natural Language Processing, Computer Vision & Pattern Recognition, Knowledge Based Systems, Image Processing, Design & Analysis of Algorithms.
 
@@ -30,7 +30,7 @@ Both degrees: 100% tuition fee waiver. Relevant coursework: Machine Learning & N
 * Dec 2024 – Present: Lecturer, Dept. of Computer Science
   * American International University–Bangladesh (AIUB)
   * Teaches programming, computer architecture, operating systems, software engineering, and web development
-  * Lead developer, in-department Web Development & Automation team — builds systems to digitize and automate departmental activities, including the student course registration system (open-credit model) and the admission management system
+  * Lead developer, in-department Web Development & Automation team: builds systems to digitize and automate departmental activities, including the student course registration system (open-credit model) and the admission management system
 
 * Jan 2024 – Dec 2024: Software Engineer
   * Orion Informatics Ltd.
@@ -75,5 +75,5 @@ Both degrees: 100% tuition fee waiver. Relevant coursework: Machine Learning & N
 * Peer Reviewer, ICCA 2026 (ongoing)
 
 ## Extracurricular
-* Organizer, Knights Cubing Open 2019 — co-hosted the 4th official speedcubing competition in Bangladesh; competed and solved a Rubik's Cube blindfolded
+* Organizer, Knights Cubing Open 2019: co-hosted the 4th official speedcubing competition in Bangladesh; competed and solved a Rubik's Cube blindfolded
 {% endif %}

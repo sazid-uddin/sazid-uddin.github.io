@@ -1,6 +1,6 @@
 ---
 title: "NL-to-SQL / RAG Data Extraction System"
-excerpt: "Converts natural-language requests into SQL, executes them, and returns results conversationally — prompt engineering, RAG, vector databases, Gemini and OpenAI APIs."
+excerpt: "Converts natural-language requests into SQL, executes them, and returns results conversationally: prompt engineering, RAG, vector databases, Gemini and OpenAI APIs."
 collection: portfolio
 order: 4
 tags:

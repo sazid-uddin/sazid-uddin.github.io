@@ -693,7 +693,7 @@ a.reversefootnote {
     var(--global-bg-color)
   );
 
-  &__eyebrow {
+  .research-vision__eyebrow {
     margin: 0 0 0.6em;
     font-size: 0.7rem;
     font-weight: 600;
@@ -702,7 +702,7 @@ a.reversefootnote {
     color: var(--global-base-color);
   }
 
-  &__tagline {
+  .research-vision__tagline {
     margin: 0 0 1.1em;
     padding: 0;
     border: 0;
@@ -747,8 +747,8 @@ a.reversefootnote {
     }
   }
 
-  &__note {
-    margin: 1.1em 0 0;
+  .research-vision__note {
+    margin: 1.75em 0 0;
     font-size: 0.8rem;
     font-style: italic;
     color: var(--global-text-color-light);

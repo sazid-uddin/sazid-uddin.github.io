@@ -13,12 +13,12 @@ excerpt: >-
   students. Dec 2024 – Present.
 
 
-  **Lead Developer, Web Development & Automation Team** — designing and
+  **Lead Developer, Web Development & Automation Team**: designing and
   building internal systems to digitize and automate departmental
   activities and ensure smooth, efficient operation.
 
 
-  **Contributor, Course Registration & Admission Management Systems** —
+  **Contributor, Course Registration & Admission Management Systems**:
   contributed to the student course registration system supporting AIUB's
   open-credit registration model, and to the admission management system.
 ---

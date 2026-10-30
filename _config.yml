@@ -22,7 +22,8 @@ repository               : "sazid-uddin/sazid-uddin.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "sazid.jpg"
+  avatar           : "avatar-v3-400.png" # sidebar size
+  avatar_full      : "avatar-v3-original.png" # shown in the click-to-enlarge modal
   name             : "Md. Sazid Uddin"
   pronouns         : # example: "she/her"
   bio              : "AI researcher and software engineer working on interpretable, verifiable AI systems, and the production infrastructure to ship them."

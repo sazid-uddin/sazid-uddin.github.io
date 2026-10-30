@@ -207,4 +207,9 @@
   {% include location-modal.html location=author.location %}
 {% endif %}
 
-{% include photo-modal.html src=avatar_src alt=author.name %}
+{% if author.avatar_full %}
+  {% assign avatar_full_src = author.avatar_full | prepend: "/images/" | prepend: base_path %}
+{% else %}
+  {% assign avatar_full_src = avatar_src %}
+{% endif %}
+{% include photo-modal.html src=avatar_full_src alt=author.name %}

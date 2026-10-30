@@ -530,7 +530,8 @@ body:hover .visually-hidden button {
   }
 
   &__box--photo {
-    width: auto;
+    display: block;
+    width: fit-content;
     max-width: 90vw;
     height: auto;
     max-height: 90vh;
@@ -542,8 +543,11 @@ body:hover .visually-hidden button {
 
   &__photo {
     display: block;
+    width: auto;
+    height: auto;
     max-width: 90vw;
     max-height: 90vh;
+    object-fit: contain;
     border-radius: $border-radius;
     box-shadow: var(--shadow-lg, #{$box-shadow});
   }

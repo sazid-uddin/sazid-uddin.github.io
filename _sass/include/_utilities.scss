@@ -622,6 +622,11 @@ body:hover .visually-hidden button {
   border-radius: $border-radius;
 }
 
+.pub-badge--type {
+  color: var(--global-bg-color);
+  background: var(--accent-color, var(--global-base-color));
+}
+
 .pub-doi {
   font-size: $type-size-7;
   word-break: break-all;

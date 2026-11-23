@@ -84,16 +84,20 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
-# Order here is the display order on the Publications page.
+# 'label' is the type badge shown on each entry. Publications are listed newest first.
 publication_category:
   manuscripts:
     title: 'Journal Articles'
+    label: 'Journal Article'
   conferences:
     title: 'Conference Papers'
+    label: 'Conference Paper'
   books:
     title: 'Book Chapters'
+    label: 'Book Chapter'
   preprints:
     title: 'Preprints'
+    label: 'Preprint'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

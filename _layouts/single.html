@@ -37,11 +37,11 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
-          {% if page.badges %}
+          {% assign pub_type = site.publication_category[page.category].label %}
           <p class="pub-badges">
+            {% if pub_type %}<span class="pub-badge pub-badge--type">{{ pub_type }}</span>{% endif %}
             {% for badge in page.badges %}<span class="pub-badge">{{ badge }}</span>{% endfor %}
           </p>
-          {% endif %}
           <p>Published in {% if page.venue_url %}<a href="{{ page.venue_url }}" target="_blank" rel="noopener noreferrer"><strong>{{ page.venue }}</strong></a>{% else %}<strong>{{ page.venue }}</strong>{% endif %}, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
